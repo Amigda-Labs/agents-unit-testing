@@ -1,4 +1,4 @@
-#!/Users/josejaimegarcia/Documents/Amigda/Projects/amigda-edu-projects/agents-unit-testing/.venv/bin/python3
+#!/Users/josejaimegarcia/Documents/Amigda/Projects/amigda-edu-projects/agents-unit-testing/.venv/bin/python
 # -*- coding: utf-8 -*-
 import sys
 from charset_normalizer.cli import cli_detect
