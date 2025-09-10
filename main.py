@@ -1,18 +1,20 @@
-
+#Step 1: Import OpenAI Agents SDK
 from agents import Agent
-from agents import Runner
 
+#Step 2: Test communication with the agent prototype using REPL
+from dotenv import load_dotenv      # Loads up the keys needed in order to communicate
+import asyncio                      # Python's toolkit for async programming
+from agents import run_demo_loop    # nteractive testing of an agent's behavior directly in your terminal
 
+load_dotenv()
 
 cashier_agent=Agent(
-    name = "cashier agent",
-    instructions = "you are a cashier"
+    name = "Cashier agent",
+    instructions = "You are a friendly cashier serving in Pizza Planet"
 )
 
-
-
-def main():
-    print("Hello from agents-unit-testing!")
+async def main():
+    await run_demo_loop(cashier_agent)
 
 if __name__ == "__main__":
-    main()
+    asyncio.run(main())
