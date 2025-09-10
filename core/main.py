@@ -6,12 +6,15 @@ from dotenv import load_dotenv      # Loads up the keys needed in order to commu
 import asyncio                      # Python's toolkit for async programming
 from agents import run_demo_loop    # nteractive testing of an agent's behavior directly in your terminal
 
-load_dotenv()
+#Step 3: Refactor file structure
+from pizza_planet_agents.cashier_agent import cashier_agent
 
-cashier_agent=Agent(
-    name = "Cashier agent",
-    instructions = "You are a friendly cashier serving in Pizza Planet"
-)
+
+# ======= How to Run =======
+# Since we placed main in the core folder,  "uv run core/main.py"
+# ==========================
+
+load_dotenv()
 
 async def main():
     await run_demo_loop(cashier_agent)
